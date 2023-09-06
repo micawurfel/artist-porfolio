@@ -1,0 +1,41 @@
+.article{
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 3em;
+    @include flex (row, wrap, start, start);
+    @include mobile(){
+        padding-top: 4em; 
+        @include flex (column, nowrap, start, center);
+    }
+
+    &__img{
+        width: auto;
+        max-height: 80vh;
+        @include mobile(768px){
+            width: 80%;
+            height: auto;
+        }
+        @include mobile(){
+            width: 90%;
+        }
+    }
+
+    &__div{
+        padding: 1em;
+        @include flex (column, nowrap, start, start);
+        @include mobile(){
+            @include flex (column, nowrap, start, center)
+        }
+    }
+    &__h3{
+        font-size: 2em;
+        margin-bottom: 0.2em;
+    }
+    &__p{
+        text-align: justify;
+    }
+    &__button{
+        text-decoration: underline;
+        font-size: 1em;
+    }
+}

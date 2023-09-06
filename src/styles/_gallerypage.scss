@@ -1,0 +1,29 @@
+.article--gallery{
+    @include flex(column, nowrap, start, center);
+    min-height: 100vh;
+
+    .article__h2{
+        font-size: 2.5em;
+        margin: 2rem;
+    }
+
+    .article__div--gallery{
+        margin: 1em;
+        @include flex (row, wrap, space-around, start);
+        @include mobile(){
+            margin: 20px;
+        }
+    }
+    
+    .article__img--gallery{
+        margin: 1em;
+        max-width: 350px;
+        @include mobile(){
+            margin: 1em 0;
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+

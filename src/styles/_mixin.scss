@@ -1,0 +1,32 @@
+@mixin flex ($direction, $wrap, $justify, $align){
+    display: flex;
+    flex-flow: $direction $wrap;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin mobile($size: 480px){
+    @media screen and (max-width:$size){
+        @content;
+    }
+}
+
+@mixin background($background: $color-principal) {
+
+    @if $background ==  $color-principal{   
+        background-color: $background;
+        color: $color-secundary;
+        ::selection{
+            background-color: $color-secundary;
+            color: $color-principal;
+        }
+
+    } @if $background ==  $color-secundary{
+        background-color: $color-secundary;
+        color: $color-principal;
+        ::selection{
+            background-color: $color-principal;
+            color: $color-secundary;
+        }
+    }
+}
