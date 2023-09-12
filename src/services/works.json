@@ -1,100 +1,100 @@
 {
-    "works":[
-      {
-        "id": 2,
-        "name": "Todo me da paja",
-        "description": "Obra al aerosol",
-        "widht": "",
-        "hight": "",
-        "weight": "", 
-        "date": "2023",
-        "img": "images/_2.jpg",
-        "precio": "",
-        "sold": false
-      },
-      {
-        "id": 3,
-        "name": "Hola soy un titulo",
-        "description": "Obra al aerosol",
-        "widht": 90,
-        "hight": 118,
-        "weight": "", 
-        "date": "2023",
-        "img": "images/_3.jpg",
-        "precio": "",
-        "sold": false
-      },
-      {
-        "id": 4,
-        "name": "Hermano mayor",
-        "description": "Obra al aerosol",
-        "widht": 35,
-        "hight": 42,
-        "weight": "", 
-        "date": "2023",
-        "img": "images/_4.jpg",
-        "precio": "",
-        "sold": false
-      },
-      {
-        "id": 5,
-        "name": "malcom in the middle",
-        "description": "Obra al aerosol",
-        "widht": 32.5,
-        "hight": 40,
-        "weight": "", 
-        "date": "2023",
-        "img": "images/_5.jpg",
-        "precio": "",
-        "sold": false
-      },
-      {
-        "id": 6,
-        "name": "el bebe",
-        "description": "Obra al aerosol",
-        "widht": "",
-        "hight": "",
-        "weight": "", 
-        "date": "2023",
-        "img": "images/_6.jpg",
-        "precio": "",
-        "sold": false
-      },
-      {
-        "id": 7,
-        "name": "turbada como mi mente",
-        "description": "Obra al aerosol",
-        "widht": "",
-        "hight": "",
-        "weight": "", 
-        "date": "2023",
-        "img": "images/_7.jpg",
-        "precio": "",
-        "sold": false
-      },
-      {
-        "id": 8,
-        "name": "un budita muy durmiente",
-        "description": "Obra al aerosol",
-        "widht": 100,
-        "hight": 70,
-        "weight": "", 
-        "date": "2023",
-        "img": "images/_8.jpg",
-        "precio": "",
-        "sold": false
-      },
-      {
-        "id": 9,
-        "name": "sabanas blancas",
-        "description": "Obra al aerosol",
-        "widht": "",
-        "hight": "",
-        "weight": "", 
-        "date": "2023",
-        "img": "images/_9.jpg",
-        "precio": "",
-        "sold": false
-      }
-    ]
+  "works": [
+    {
+      "id": 2,
+      "name": "Todo me da paja",
+      "description": "Obra al aerosol",
+      "widht": "",
+      "hight": "",
+      "weight": "",
+      "date": "2023",
+      "img": "images/_2.jpg",
+      "precio": "",
+      "sold": false
+    },
+    {
+      "id": 3,
+      "name": "Hola soy un titulo",
+      "description": "Obra al aerosol, Obra al aerosol, Obra al aerosol",
+      "widht": 90,
+      "hight": 118,
+      "weight": "",
+      "date": "2023",
+      "img": "images/_3.jpg",
+      "precio": "",
+      "sold": false
+    },
+    {
+      "id": 4,
+      "name": "Hermano mayor",
+      "description": "Obra al aerosol",
+      "widht": 35,
+      "hight": 42,
+      "weight": "",
+      "date": "2023",
+      "img": "images/_4.jpg",
+      "precio": "",
+      "sold": false
+    },
+    {
+      "id": 5,
+      "name": "malcom in the middle",
+      "description": "Obra al aerosol",
+      "widht": 32.5,
+      "hight": 40,
+      "weight": "",
+      "date": "2023",
+      "img": "images/_5.jpg",
+      "precio": "",
+      "sold": false
+    },
+    {
+      "id": 6,
+      "name": "el bebe",
+      "description": "Obra al aerosol",
+      "widht": "",
+      "hight": "",
+      "weight": "",
+      "date": "2023",
+      "img": "images/_6.jpg",
+      "precio": "",
+      "sold": false
+    },
+    {
+      "id": 7,
+      "name": "turbada como mi mente",
+      "description": "Obra al aerosol",
+      "widht": "",
+      "hight": "",
+      "weight": "",
+      "date": "2023",
+      "img": "images/_7.jpg",
+      "precio": "",
+      "sold": false
+    },
+    {
+      "id": 8,
+      "name": "un budita muy durmiente",
+      "description": "Obra al aerosol",
+      "widht": 100,
+      "hight": 70,
+      "weight": "",
+      "date": "2023",
+      "img": "images/_8.jpg",
+      "precio": "",
+      "sold": false
+    },
+    {
+      "id": 9,
+      "name": "sabanas blancas",
+      "description": "Obra al aerosol",
+      "widht": "",
+      "hight": "",
+      "weight": "",
+      "date": "2023",
+      "img": "images/_9.jpg",
+      "precio": "",
+      "sold": false
+    }
+  ]
 }

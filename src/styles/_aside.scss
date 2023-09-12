@@ -1,12 +1,12 @@
-.aside{
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 40px;
-    height: 100vh;
-    padding-right: 10px;
-    z-index: 4;
-    @include flex(column, nowrap, start, center);
-    color: $color-secundary;
-    mix-blend-mode: difference;
+.aside {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 100vh;
+  padding-right: 10px;
+  z-index: 4;
+  @include flex(column, nowrap, start, center);
+  color: $color-secundary;
+  mix-blend-mode: difference;
 }

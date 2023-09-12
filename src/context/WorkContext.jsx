@@ -1,22 +1,19 @@
-import { createContext, useContext, useState, useEffect} from "react";
-import { useParams } from 'react-router-dom'
+import { createContext, useContext, useState } from 'react'
 import { ApiService } from '../services/ApiService'
 
 export const WorkContext = createContext({})
 
 export const useWorkContext = () => useContext(WorkContext)
 
-
-export default function WorkContextProvider({children}) {
-
+export default function WorkContextProvider({ children }) {
   const apiService = new ApiService()
 
   const [works, setWorks] = useState([])
   // const [art, setArt] = useState({})
 
-  async function getWorks(){
-      const response = await apiService.getWorks()
-      setWorks(response.works)
+  async function getWorks() {
+    const response = await apiService.getWorks()
+    setWorks(response.works)
   }
 
   const scrollToTop = () => {
@@ -24,8 +21,8 @@ export default function WorkContextProvider({children}) {
   }
 
   return (
-    <WorkContext.Provider value={{works, getWorks, scrollToTop}}>
-        {children}
+    <WorkContext.Provider value={{ works, getWorks, scrollToTop }}>
+      {children}
     </WorkContext.Provider>
   )
 }

@@ -1,47 +1,55 @@
-import React, {useEffect, useState} from 'react'
+import { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { ApiService } from '../../services/ApiService'
 import { useWorkContext } from '../../context/WorkContext'
+import { IoCaretBack } from 'react-icons/io5'
 
 export default function Art() {
-
-  const {scrollToTop} = useWorkContext()
+  const { scrollToTop } = useWorkContext()
 
   const apiService = new ApiService()
 
   const [art, setArt] = useState({})
-  const {name} = useParams()
+  const { name } = useParams()
 
-  async function getArt(){
+  async function getArt() {
     const response = await apiService.getWorks()
     response.works.forEach(art => {
       const title = art.name.split(' ').join('-').toLowerCase()
-      if(name == title){
-          setArt(art)
+      if (name === title) {
+        setArt(art)
       }
     })
   }
 
-  useEffect(()=>{
+  useEffect(() => {
     getArt()
-  },[name])
+  }, [name])
 
   return (
-    <article className='article'>
-      <img src={art.img}  className='article__img' alt=""/>
-      <div className='article__div'>
-          <h3 className='article__h3'>{art.name}</h3>
-          <p className='article__p'>{art.description}</p>
-          <p className='article__p'>{`${art.widht}cm x ${art.hight}cm `}</p>
-          <p className='article__p'>{art.date}</p>
+    <section className="section-art">
+      <article className="article">
+        <img src={art.img} className="article__img" alt="" />
+        <div className="article__div">
+          <h3 className="article__h3">{art.name}</h3>
+          <p className="article__p">{art.description}</p>
+          <p className="article__p">{`${art.widht}cm x ${art.hight}cm `}</p>
+          <p className="article__p">{art.date}</p>
           <div>
-            <a className='article__button' href={`mailto:info@mailenmorale.com?subject=${art.name}`}>Email for enquiries about this piece</a>
+            <a
+              className="article__a"
+              href={`mailto:info@mailenmorale.com?subject=${art.name}`}>
+              Email for enquiries about this piece
+            </a>
             <Link to={'/gallery'} onClick={scrollToTop}>
-              <button className='article__button'>Back to the gallery</button>
+              <button className="article__button">
+                <IoCaretBack />
+                Back to the gallery
+              </button>
             </Link>
           </div>
-          
-      </div>
-     </article>
+        </div>
+      </article>
+    </section>
   )
 }

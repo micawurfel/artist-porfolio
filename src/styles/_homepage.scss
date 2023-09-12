@@ -1,120 +1,116 @@
 // SECTIONS
-.section{
+.section {
+  min-height: 100vh;
+  @include flex(column, nowrap, center, center);
+  text-align: justify;
+
+  &--about,
+  &--gallery {
     min-height: 100vh;
-    @include flex(column, nowrap, center, center);
-    text-align: justify;
-
-    &--about, &--gallery{
-        min-height: 100vh;
-        @include background;
-        @include mobile(){
-            width: 100%;
-        }
+    @include background;
+    @include mobile() {
+      width: 100%;
     }
+  }
 
-    // HOME
+  // HOME
 
-    &__h1{
-        text-align: center;
-        font-size: 3.8em;
-        line-height: 1.8em;
-        @include mobile{
-            margin: 0.2em;
-        }
+  &__h1 {
+    text-align: center;
+    font-size: 3.8em;
+    line-height: 1.8em;
+    @include mobile {
+      margin: 0.2em;
     }
-    &__h2{
-        font-size: 2.5em;
-        margin: 2rem;
+  }
+  &__h2 {
+    font-size: 2.5em;
+    margin: 2rem;
+  }
+
+  // ABOUT
+
+  &__div {
+    @include flex(row, wrap, center, center);
+    width: 75%;
+  }
+
+  &__img {
+    margin: 1rem;
+    width: 400px;
+    @include mobile() {
+      width: 100%;
     }
-    
-// ABOUT
+  }
 
-    &__div{
-        @include flex (row, wrap, center, center);
-        width: 75%;
+  &__article {
+    padding: 1rem;
+    max-width: 600px;
+    @include flex(column, wrap, center, start);
+  }
+  &__p {
+    padding: 0.5em;
+  }
+
+  &__button {
+    border-radius: 8px;
+    border: 2px solid $color-secundary;
+    padding: 0.6em 1.2em;
+    margin-bottom: 1em;
+    transition: transform 0.2s;
+    &:hover {
+      transform: scale(1.1);
     }
+  }
 
-    &__img{
-        margin: 1rem;
-        width: 400px;
-        @include mobile(){
-            width: 100%;
-        }
-    }
-
-    &__article{
-        padding: 1rem;
-        max-width: 600px;
-        @include flex (column, wrap, center, start,)
-    }
-    &__p{
-        padding: 0.5em;
-    }
-
-    &__button{
-        border-radius: 8px;
-        border: 2px solid $color-secundary;
-        padding: 0.6em 1.2em;
-        margin-bottom: 1em;
-        transition: transform .2s; 
-        &:hover{
-            transform: scale(1.1); 
-        }
-    }
-
-    // GALLERY
-    &__div--gallery{
-        
-        .div{
-            margin-bottom: 10rem;
-            width: 51%;
-            padding: 10px;
-            position: sticky;
-            top: 15%;
-            @include mobile(768px){
-                width: auto;
-                padding: 10px;
-                margin: 0;
-                position: relative;
-            }
-
-            &__img--filter{
-                // height: 400px;
-                max-width: 500px;
-                filter: grayscale(100%);
-                &:hover{
-                    filter: grayscale(0%);
-                }
-                @include mobile(768px){
-                    filter: none;
-                    width: 100%;
-                    height: auto;
-                }
-            }
-        }
-    }
-
-
-// CONTACT
-
-    &__form{
-        width: 50%;
-        @include flex (column, nowrap, center, center);
-        @include mobile(768px){
-            width: 90%;
-        }
-    }
-    &__input{
-        border: 2px solid $color-principal;
-        margin-bottom: 1rem;
-        border-radius: 5px;
+  // GALLERY
+  &__div--gallery {
+    .div {
+      margin-bottom: 10rem;
+      width: 51%;
+      padding: 10px;
+      position: sticky;
+      top: 15%;
+      @include mobile(768px) {
+        width: auto;
         padding: 10px;
-        width: 100%;
-    }
-    &__button--contact{
-        border: 2px solid $color-principal;
-    }
-    
+        margin: 0;
+        position: relative;
+      }
 
+      &__img--filter {
+        // height: 400px;
+        max-width: 500px;
+        filter: grayscale(100%);
+        &:hover {
+          filter: grayscale(0%);
+        }
+        @include mobile(768px) {
+          filter: none;
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  // CONTACT
+
+  &__form {
+    width: 50%;
+    @include flex(column, nowrap, center, center);
+    @include mobile(768px) {
+      width: 90%;
+    }
+  }
+  &__input {
+    border: 2px solid $color-principal;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+  }
+  &__button--contact {
+    border: 2px solid $color-principal;
+  }
 }
-
